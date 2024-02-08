@@ -1,0 +1,305 @@
+/* TABLE OF CONTENTS */
+
+/*
+1. VARIABLES
+2. RESET
+3. COMMON
+4. COMPONENTS
+5. LAYOUT
+6. UTILITIES
+7. MEDIA QUERIES
+*/
+
+/* 1. VARIABLES */
+:root {
+    /* COLORS */
+    --clr-pry-red: hsl(0, 78%, 62%);
+    --clr-pry-cyan: hsl(180, 62%, 55%);
+    --clr-pry-orange: hsl(34, 97%, 64%);
+    --clr-pry-blue: hsl(212, 86%, 64%);
+
+    --clr-ntl-vd-blue: hsl(234, 12%, 34%);
+    --clr-ntl-grayish-blue: hsl(229, 6%, 66%);
+    --clr-ntl-vl-gray: hsl(0, 0%, 98%);
+
+    --fs-body: .938rem;
+    --fs-h1: 1.5rem;
+    --fs-h2: 1.25rem;
+    --fs-card: .813rem;
+
+    --mq-mobile: 375px;
+    --mq-desktop: 1440px;
+}
+
+/* 2. RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* 3. COMMON */
+body {
+    margin: 0;
+    background-color: var(--clr-ntl-vl-gray);
+    font-size: var(--fs-body);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+header,
+main,
+footer {
+    display: flow-root;
+}
+
+h1, h2 {
+    color: var(--clr-ntl-vd-blue);
+}
+
+p {
+    color: var(--clr-ntl-grayish-blue);
+}
+
+/* 4. COMPONENT */
+.card {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 9px 16px -9px var(--clr-ntl-grayish-blue);
+    overflow: hidden;
+    width: 311px;
+    height: 222px;
+}
+
+.card__theme {
+    background-repeat: no-repeat;
+    background-size: 58px 58px;
+    background-position: bottom 28px right 28px;
+    padding: 0 1.875em;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card__theme.cyan {
+    border-top : 4px solid var(--clr-pry-cyan);
+}
+
+.card__theme.red {
+    border-top : 4px solid var(--clr-pry-red);
+}
+
+.card__theme.orange {
+    border-top : 4px solid var(--clr-pry-orange);
+}
+
+.card__theme.blue {
+    border-top : 4px solid var(--clr-pry-blue);
+}
+
+.cyan {
+    background-image: url('../images/icon-supervisor.svg');
+}
+
+.red {
+    background-image: url('../images/icon-team-builder.svg');
+    
+}
+
+.orange {
+    background-image: url('../images/icon-karma.svg');
+    
+}
+
+.blue {
+    background-image: url('../images/icon-calculator.svg');
+    
+}
+
+.card__title {
+    margin-block-start: 1.25em;
+    font-size: var(--fs-h2);
+    line-height: 1.2;
+}
+
+.card__text {
+    margin-block-start: .5em;
+    font-size: var(--fs-card);
+    line-height: 1.8;
+}
+
+/* 5. LAYOUT */
+.container {
+    margin-inline: auto;
+    width: var(--mq-mobile);
+    padding: 0 2em;
+}
+
+.card-display {
+    margin-block-start: 5em;
+    display: grid;
+    grid-template-columns: 316px;
+    gap: 1.625em;
+}
+
+.ai-tools__section {
+    padding: 6em 0 4.75em 0;
+}
+
+.ai-tools__title {
+    margin-block-start: 0;
+    font-size: var(--fs-h1);
+    text-align: center;
+}
+
+.ai-tools__title span {
+    font-weight: 200;
+    display: block;
+    margin-block-end: .375em;
+}
+
+.ai-tools__text {
+    margin-block-start: 1.5em;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* 6. UTILITIES */
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1110px) {
+    .container {
+        width: 1110px;
+    }
+
+    .ai-tools__section {
+        padding-top: 5.75em;
+    }
+
+    .ai-tools__title span {
+        margin-block-end: .25em;
+    }
+
+    .ai-tools__title {
+        font-size: 38px;
+    }
+
+    .ai-tools__text {
+        width: 50%;
+        margin-inline: auto;
+    }
+
+    .card-display {
+        margin-inline: auto;
+        margin-block-start: 4.125em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.875em;
+    }
+
+    .card-display div:nth-child(1) {
+        margin-block: auto;
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+
+    .card-display div:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .card-display div:nth-child(3) {
+        grid-column: 2 / 3;
+        grid-row: 2 ;
+    }
+
+    .card-display div:nth-child(4) {
+        margin-block: auto;
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+
+    .card {
+        width: 351px;
+        height: 250px;
+    }
+
+    .card__theme {
+        background-position: bottom 32px right 32px;
+        background-size: 64px 64px;
+        padding: 0 2.125em 0 2em ;
+    }
+
+    .card__title {
+        margin-block-start: 1.5em;
+    }
+    
+    .card__text {
+        margin-block-start: .875em;
+    }
+}
