@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/daHatta/fem-four-card-feature-section](https://github.com/daHatta/fem-four-card-feature-section)
+- Live Site URL: [https://dahatta.github.io/fem-four-card-feature-section/](https://dahatta.github.io/fem-four-card-feature-section/)
 
 ## My process
 
