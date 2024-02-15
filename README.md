@@ -15,8 +15,6 @@ This is my solution to the [Four card feature section challenge on Frontend Ment
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -32,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/daHatta/fem-four-card-feature-section](https://github.com/daHatta/fem-four-card-feature-section)
-- Live Site URL: [https://dahatta.github.io/fem-four-card-feature-section/](https://dahatta.github.io/fem-four-card-feature-section/)
+- Live Site URL: [https://dahatta.github.io/fem-four-card-feature-section](https://dahatta.github.io/fem-four-card-feature-section)
 
 ## My process
 
